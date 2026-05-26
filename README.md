@@ -13,7 +13,6 @@
 - [Project Overview](#project-overview)
 - [System Architecture](#system-architecture)
 - [Key Findings](#key-findings)
-- [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [Dataset](#dataset)
 - [Methodology](#methodology)
