@@ -15,7 +15,6 @@
 - [Key Findings](#key-findings)
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
-- [Usage](#usage)
 - [Dataset](#dataset)
 - [Methodology](#methodology)
 - [Technologies](#technologies)
@@ -100,35 +99,6 @@ This project builds an embodied AI framework to:
 
 ---
 
-## Project Structure
-
-```
-reachy-mini-embodied-ai/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-├── requirements.txt
-│
-├── notebooks/
-│   ├── 01_prompt_analysis.ipynb       ← Cosine similarity, outcome profiling, delta scores
-│   └── 02_embedding_visualization.ipynb ← TF-IDF + LSA, PCA / t-SNE / MDS clustering
-│
-├── src/
-│   ├── __init__.py
-│   └── prompt_dataset.py              ← Canonical 26-prompt dataset as importable module
-│
-├── data/
-│   └── prompts.csv                    ← Structured prompt log (round, prompt, outcome, response)
-│
-├── reports/
-│   └── figures/                       ← Generated 300-DPI plots
-│
-└── docs/
-    └── methodology.md                 ← Detailed methodology write-up
-```
-
----
 
 ## Setup & Installation
 
@@ -142,29 +112,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 jupyter lab
-```
-
----
-
-## Usage
-
-Run notebooks in order:
-
-```bash
-# Notebook 1 — Cosine similarity analysis, outcome profiling, KPI dashboard
-jupyter nbconvert --to notebook --execute notebooks/01_prompt_analysis.ipynb
-
-# Notebook 2 — TF-IDF + LSA embeddings, PCA / t-SNE / MDS visualization
-jupyter nbconvert --to notebook --execute notebooks/02_embedding_visualization.ipynb
-```
-
-Or use the dataset directly:
-
-```python
-from src.prompt_dataset import load_prompts
-
-df = load_prompts()
-print(df.groupby('outcome').size())
 ```
 
 ---
@@ -186,15 +133,12 @@ The dataset is self-contained — no external files required. All 26 prompts are
 
 ## Methodology
 
-See [`docs/methodology.md`](docs/methodology.md) for full details on:
-
 - Experimental design (3-round structure: Variability → Sensitivity → Failure)
 - TF-IDF embedding strategy (word + character n-grams, L2-normalized)
 - LSA/SVD compression to 16-D
 - Dimensionality reduction comparison: PCA vs t-SNE (perplexity=7) vs MDS
 - Delta score: `Sim(success_centroid) − Sim(failure_centroid)` as a prompt quality signal
 - Cross-group similarity matrix interpretation
-
 ---
 
 ## Technologies
@@ -222,7 +166,7 @@ Slides: [`reports/PresentationsJishan.pdf`](reports/PresentationsJishan.pdf)
 **Dr. Jishan Ahmed**  
 Data Science Assistant Professor · Weber State University
 
-- [LinkedIn](https://linkedin.com/in/your-profile)
+- [LinkedIn](https://www.linkedin.com/in/jishan-ahmed-689aa63b)
 - [GitHub](https://github.com/JishanAhmed2019)
 
 ---
