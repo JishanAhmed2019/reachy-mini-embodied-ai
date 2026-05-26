@@ -1,0 +1,27 @@
+round,round_name,prompt,outcome,robot_response
+1,Variability,can you spin,success,head moved / rotated
+1,Variability,can you rotate in a circle,success,head rotated
+1,Variability,can you spin your head,failure,could not do it
+1,Variability,can you jump,failure,no jump
+1,Variability,can you do a head dive,success,it danced
+1,Variability,can you dance,success,moved head back and forth
+1,Variability,can you dance,success,moved head in circle
+1,Variability,can you dance,success,head bobble
+1,Variability,asked to dance,success,wiggled neck body
+1,Variability,asked to dance,success,shaked antenna
+1,Variability,asked to dance,partial,switched motion
+2,Sensitivity,can you hop,success,rotated moved head
+2,Sensitivity,can you jump,failure,no movement
+2,Sensitivity,i cannot do that,failure,no movement
+2,Sensitivity,i cannot do that,failure,no movement different voice
+2,Sensitivity,sure i will dance,success,robot danced
+2,Sensitivity,can you break dance,success,sway and roll
+2,Sensitivity,can you dance like a rock star,success,nods its head
+2,Sensitivity,can you dance like michael jackson,success,shifts side to side
+3,Failure Analysis,stand still then dance,partial,did not stay still then danced
+3,Failure Analysis,explain quantum physics,failure,refusal
+3,Failure Analysis,dance but stand still,partial,robot stayed still
+3,Failure Analysis,be a cat and dance,failure,no action
+3,Failure Analysis,do the worm backflip,partial,unexpected motion
+3,Failure Analysis,can you do a backflip,failure,no motion
+3,Failure Analysis,can you do the whip nae nae,failure,no motion
